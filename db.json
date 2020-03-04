@@ -1,0 +1,40 @@
+{
+  "urls": [
+    {},
+    {},
+    {},
+    {},
+    {
+      "slug": "a",
+      "dest": "https://google.ca"
+    },
+    {
+      "slug": "a",
+      "dest": "https://google.ca"
+    },
+    {
+      "slug": "a",
+      "dest": "https://google.ca"
+    },
+    {
+      "slug": "c",
+      "dest": "https://seshan.xyz"
+    },
+    {
+      "slug": "c",
+      "dest": "https://seshan.xyz"
+    },
+    {
+      "slug": "c",
+      "dest": "https://seshan.xyz"
+    },
+    {
+      "slug": "d",
+      "dest": "https://seshan.xyz"
+    },
+    {
+      "slug": "eee",
+      "dest": "https://seshan.xyz"
+    }
+  ]
+}
