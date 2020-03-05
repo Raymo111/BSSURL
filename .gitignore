@@ -104,3 +104,6 @@ dist
 .tern-port
 
 db.json
+
+.idea
+.DS_Store
