@@ -4,7 +4,7 @@ const Hapi = require("@hapi/hapi");
 const low = require('lowdb');
 const FileAsync = require('lowdb/adapters/FileAsync');
 
-const adapter = new FileAsync('db.json');
+const adapter = new FileAsync('/db.json');
 const apiPrefix = "/api/v1";
 
 const config = require("./config");
