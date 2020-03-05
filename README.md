@@ -1,2 +1,2 @@
 # bssurl-server
-Server for bssurl
+because raymo

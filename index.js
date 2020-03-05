@@ -16,9 +16,11 @@ const init = async () => {
     await db.defaults({ urls: [] }).write();
 
     const server = Hapi.server({
-        port: process.env.PORT,
+        port: process.env.PORT || 3000,
         host: "localhost"
     });
+
+    await server.register(require('inert'));
 
     // Return all URL Mappings
     server.route({
@@ -70,6 +72,32 @@ const init = async () => {
         }
     });
 
+
+    // ~ Public ~
+    // Routes matching slug.
+    server.route({
+        method: "GET",
+        path: "/{slug}",
+        handler: async (request, h) => {
+            let url = db.get("urls").find({slug: request.params.slug}).value();
+            console.log(url);
+            if(url !== undefined) {
+                return h.redirect(url.dest);
+            } else {
+                return "Not Found";
+            }
+        }
+    });
+
+    server.route({
+        method: 'GET',
+        path: '/{param*}',
+        handler: {
+            directory: {
+                path: 'public/'
+            }
+        }
+    });
 
     await server.start();
     console.log("BSSURL Server running on %s", server.info.uri);
