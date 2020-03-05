@@ -47,12 +47,12 @@ const init = async () => {
             // First check if it exists already...
             if(db.get("urls").find({slug: request.payload.slug}).value() !== undefined) {
                 // Already exists, fail.
-                return false;
+                return h.response(false).code(553);
             } else {
                 // Then add it to the database
                 console.log("Adding new URL Mapping: " + JSON.stringify(request.payload));
                 await db.get("urls").push(request.payload).write();
-                return true;
+                return h.response(true).code(201);
             }
         }
     });
