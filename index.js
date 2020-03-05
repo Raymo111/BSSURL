@@ -16,7 +16,7 @@ const init = async () => {
     await db.defaults({ urls: [] }).write();
 
     const server = Hapi.server({
-        port: 80,
+        port: process.env.PORT,
         host: "localhost"
     });
 
