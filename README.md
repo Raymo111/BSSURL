@@ -11,6 +11,6 @@
 
 Welcome to the official URL shortener for Bayview SS, hosted as an Azure app service, using NodeJS (mostly).
 
-Designed and created by [[user:Raymo111]] (https://raymond.li) and [[user:seshpenguin]] (https://seshan.xyz).
+Designed and created by [[user:Raymo111]] (https://raymond.li).
 
 Please feel free to use any part of this repository in anything you want, as long as you keep it open-source!
